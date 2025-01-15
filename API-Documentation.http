@@ -1,0 +1,18 @@
+### Create a new trip
+POST http://localhost:8080/trips
+Content-Type: application/json
+
+{
+  "destination": "Florida",
+  "starts_at": "2024-06-25T21:51:54.7342Z",
+  "ends_at": "2024-07-25T21:51:54.7342Z",
+  "emails_to_invite": [
+    "aaaaa@gmail.com"
+  ],
+  "owner_name": "John Doe",
+  "owner_email": "john@gmail.com"
+}
+
+### Get trip details
+GET http://localhost:8080/trips/f743cc9f-738d-4805-a9a7-a82e12e063ad
+Content-Type: application/json
