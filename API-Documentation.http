@@ -7,12 +7,49 @@ Content-Type: application/json
   "starts_at": "2024-06-25T21:51:54.7342Z",
   "ends_at": "2024-07-25T21:51:54.7342Z",
   "emails_to_invite": [
-    "aaaaa@gmail.com"
+    "aaaaa@gmail.com",
+    "bbbbb@gmail.com",
+    "ccccc@gmail.com"
   ],
   "owner_name": "John Doe",
   "owner_email": "john@gmail.com"
 }
 
 ### Get trip details
-GET http://localhost:8080/trips/f743cc9f-738d-4805-a9a7-a82e12e063ad
+GET http://localhost:8080/trips/683f3bf2-3b18-4d00-be8f-36a590a71995
 Content-Type: application/json
+
+### Get trip participants
+GET http://localhost:8080/trips/348da708-6e07-447e-a6fd-fc1bc732feb5/participants
+Content-Type: application/json
+
+### Update trip
+PUT http://localhost:8080/trips/683f3bf2-3b18-4d00-be8f-36a590a71995
+Content-Type: application/json
+
+{
+  "destination": "Florida, US",
+  "starts_at": "2025-06-25T21:51:54.7342Z",
+  "ends_at": "2025-07-25T21:51:54.7342Z"
+}
+
+
+### Confirm trip
+GET http://localhost:8080/trips/683f3bf2-3b18-4d00-be8f-36a590a71995/confirm
+Content-Type: application/json
+
+### Confirm Participant
+POST http://localhost:8080/participants/3435c008-1232-4f9a-a3cb-fc88eae0dbb6/confirm
+Content-Type: application/json
+
+{
+  "name": "AAAAAAA"
+}
+
+### Invite Participant
+POST http://localhost:8080/trips/683f3bf2-3b18-4d00-be8f-36a590a71995/invite
+Content-Type: application/json
+
+{
+  "email": "ddddd@gmail.com"
+}
