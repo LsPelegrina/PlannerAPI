@@ -53,3 +53,30 @@ Content-Type: application/json
 {
   "email": "ddddd@gmail.com"
 }
+
+### Register activity
+POST http://localhost:8080/trips/96b9bd8d-122e-40a4-b394-a9201e98d65a/activities
+Content-Type: application/json
+
+{
+  "title": "Swimming",
+  "occurs_at": "2024-06-25T21:51:54.7342Z"
+}
+
+### Get trip activities
+GET http://localhost:8080/trips/96b9bd8d-122e-40a4-b394-a9201e98d65a/activities
+Content-Type: application/json
+
+
+### Register link
+POST http://localhost:8080/trips/9b29bcb1-a509-41a8-a864-fab800757d72/links
+Content-Type: application/json
+
+{
+  "title": "Swimming",
+  "url": "https://www.google.com"
+}
+
+### Get trip links
+GET http://localhost:8080/trips/9b29bcb1-a509-41a8-a864-fab800757d72/links
+Content-Type: application/json
